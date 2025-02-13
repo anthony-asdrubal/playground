@@ -1,0 +1,276 @@
+@import 'fonts.css';
+
+body {
+    background-color: hsl(36, 100%, 99%);
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.above {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 90px;
+}
+.menu-button {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    padding: 0;
+    align-items: center;
+    display: none;
+}
+.menu-button img {
+    width: 100%;
+    height: 100%;
+}
+a {
+    font-family: inter;
+    display: inline-block;
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+    font-size: 20px;
+    padding-left: 30px;    
+}
+.principal {
+    display: flex;
+    gap: 20px;
+    margin-top: 0%;
+}
+.izquierda {
+    display: flex;
+    align-items: flex-end;
+    flex: 2;
+    flex-direction: column;
+    gap: 15px;
+}
+.text {
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    gap: 50px;
+}
+.portada {
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+}
+.portada-mobile {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+h2 {
+    font-family: inter;
+    width: 40%;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+.last {
+    width: 60%;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    gap: 30px;
+    justify-items: space-between;
+}
+.maintext {
+    color: hsl(236, 13%, 42%);
+    font-size: 20px;
+    margin: 0;
+}
+.info {
+    background-color: hsl(5, 85%, 63%);
+    display: inline-block;
+    width: 120px;
+    padding: 15px;
+    font-family: inter;
+    text-align: center;
+    font-size: 17px;
+    color: hsl(240, 100%, 5%);
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.news {
+    width: 30%;
+    background-color: hsl(240, 100%, 5%);
+}
+h1 {
+    font-family: inter;
+    color: hsl(35, 77%, 62%);
+    margin-left: 5%;
+}
+.subtittle {
+    font-family: inter;
+    color: hsl(36, 100%, 99%);
+    font-size: 18px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.description {
+    font-family: inter;
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+hr {
+    margin: 40px auto;
+    width: 90%;
+}
+.interesting {
+    display: flex;
+    flex: 2;
+    gap: 15px;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.start {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding-right: 20px;
+}
+.image1 {
+    width: 100px;
+    padding-right: 15px;
+}
+.information1 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 20px;
+}
+.head1 {
+    font-family: inter;
+    border: none;
+    font-size: 35px;
+    color: hsl(5, 85%, 63%);
+    font-weight: bold;
+    margin: 0;
+    width: 200px;
+}
+.tittle1 {
+    font-family: inter;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+}
+.text1 {
+    font-family: inter;
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+}
+.middle {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding-right: 20px;
+}
+.image2 {
+    width: 100px;
+    padding-right: 15px;
+}
+.information2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.head2 {
+    font-family: inter;
+    font-size: 35px;
+    color: hsl(5, 85%, 63%);
+    font-weight: bold;
+    margin: 0;
+}
+.tittle2 {
+    font-family: inter;
+    font-size: 20px;
+    font-weight: bold;
+}
+.text2 {
+    font-family: inter;
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+}
+.end {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+.image3 {
+    width: 100px;
+    padding-right: 15px;
+}
+.information3 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.head3 {
+    font-family: inter;
+    font-size: 35px;
+    color: hsl(5, 85%, 63%);
+    font-weight: bold;
+    margin: 0;
+}
+.tittle3 {
+    font-family: inter;
+    font-size: 20px;
+    font-weight: bold;  
+}
+.text3 {
+    font-family: inter;
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+}
+@media (max-width:768px) {
+    .menu-button {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .principal {
+        display: flex;
+        flex-direction: column;
+    }
+    .izquierda {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .portada {
+        display: none;
+    }
+    .portada-mobile {
+        display: flex;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    h2 {
+        width: 100%;
+    }
+    .last {
+        width: 100%;
+        justify-items: self-start;
+        padding: 0;
+    }
+    .news {
+        width: 100%;
+    }
+    .interesting {
+        display: flex;
+        flex-direction: column;
+    }
+}

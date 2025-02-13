@@ -1,0 +1,26 @@
+html {
+    background-color: pink;
+    font-family: bodoni;
+}
+img{
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    color: purple
+} 
+
+p {
+    text-align: center;
+    color:crimson
+}
+
+.somename {
+    background-color: beige;
+}
+
+.someothername{
+    font-size: 30px;
+}
