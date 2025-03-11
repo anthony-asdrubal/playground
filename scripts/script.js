@@ -1,9 +1,10 @@
-document:addEventListener("DOMContentLoaded",Function (), {
-    const: menuButton = document.getElementsById("menu-button"),
-    const: menu = document.getElementById("menu"),
-    menuButton:addEventListener("click",Function (), {
-        menu:classlist.toggle("show"),
-    }),
-})
-  
 
+window.addEventListener("load", () => {
+    const menuButton = document.getElementById("menu-button");
+    const menu = document.getElementById("menu");
+
+    menuButton.addEventListener("click", () => {
+     menuButton.classList.toggle("active");
+     menu.classList.toggle("menuOpen");
+   });
+})

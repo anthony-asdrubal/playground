@@ -14,6 +14,10 @@ body {
 }
 .logo {
     width: 90px;
+    transition: all 500ms ease-in-out;
+}
+.logo:hover {
+    transform: rotate(180deg);
 }
 .menu-button {
     width: 30px;
@@ -24,10 +28,6 @@ body {
     padding: 0;
     align-items: center;
     display: none;
-}
-.menu-button img {
-    width: 100%;
-    height: 100%;
 }
 a {
     font-family: inter;
@@ -233,13 +233,63 @@ hr {
 }
 @media (max-width:768px) {
     .menu-button {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        width: 40px;
+        border-radius: 10%;
+        border: 3px solid hsl(240, 100%, 5%);
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+        gap: 5px;
+        transition: 300ms ease-in-out;
+    }
+    .bar {
+        display: flex;
+        height: 4px;
+        width: 30px;
+        border-radius: 10%;
+        background-color: hsl(240, 100%, 5%);
+        gap: 8px;
+        transition: 250ms ease-in-out;
+    }
+    .menu-button.active .bar:nth-last-child(1) {
+          transform: translateY(-9px) rotate(-45deg);
+    }
+    .menu-button.active .bar:nth-last-child(2) {
+         opacity: 0;
+    }
+    .menu-button.active .bar:nth-last-child(3) {
+         transform: translateY(9px) rotate(45deg);
     }
     .menu {
-        display: none;
+        visibility: hidden;
+        position: absolute;
+        opacity: 0;
+        padding: 0;
+        transition: 100ms ease-in-out;
+        left: 70%;
     }
-    .menu.show {
+    .menu a {
+        color: hsl(36, 100%, 99%);
+        font-size: 30px;
+    }
+    .menuOpen {
         display: flex;
+        flex-direction: column;
+        gap: 20px;
+        visibility: visible;
+        opacity: 1;
+        left: 70%;
+        transition: 300ms ease-in-out;
+        background-color: hsl(240, 100%, 5%);
+        border-radius: 3%;
+        align-items: center;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-right: 3%;
+        
     }
     .principal {
         display: flex;
