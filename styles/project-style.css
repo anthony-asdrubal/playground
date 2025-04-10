@@ -1,23 +1,27 @@
+@import 'reset.css';
 @import 'fonts.css';
 
 body {
+    width: 100%;
+    padding: 5% 15% 10% 15%;
     background-color: hsl(36, 100%, 99%);
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 .above {
-    display: flex;
-    margin-bottom: 40px;
+    display: flex; 
+    position: relative;
+    margin: 0 0 40px 0;
     justify-content: space-between;
     align-items: center;
+    width: 100%;    
 }
 .logo {
     width: 90px;
     transition: all 500ms ease-in-out;
+    position: relative;
+    z-index: 10;
 }
-.logo:hover {
-    transform: rotate(180deg);
+.nav {
+    position: relative;
 }
 .menu-button {
     width: 30px;
@@ -235,14 +239,16 @@ hr {
     .menu-button {
         display: flex;
         flex-direction: column;
+        position: relative;
+        z-index: 11;
         height: 40px;
         width: 40px;
         border-radius: 10%;
         border: 3px solid hsl(240, 100%, 5%);
-        justify-items: center;
-        align-content: center;
         justify-content: center;
         gap: 5px;
+        right: 0;
+        margin-left: auto;
         transition: 300ms ease-in-out;
     }
     .bar {
@@ -256,40 +262,64 @@ hr {
     }
     .menu-button.active .bar:nth-last-child(1) {
           transform: translateY(-9px) rotate(-45deg);
+          background-color: hsl(36, 100%, 99%);
     }
     .menu-button.active .bar:nth-last-child(2) {
          opacity: 0;
     }
     .menu-button.active .bar:nth-last-child(3) {
          transform: translateY(9px) rotate(45deg);
+         background-color: hsl(36, 100%, 99%);
     }
     .menu {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         opacity: 0;
         padding: 0;
         transition: 100ms ease-in-out;
-        left: 70%;
+        right: 0;
     }
     .menu a {
         color: hsl(36, 100%, 99%);
-        font-size: 30px;
+        font-size: 50px;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        display: inline-block;
+        width: 60vw;
+        height: 15vh;
+       padding: 8px 16px;
+       margin: 12px;
+    }
+    .menu a:first-child {
+        margin-top: 100px;
     }
     .menuOpen {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        position: fixed;
         visibility: visible;
         opacity: 1;
-        left: 70%;
         transition: 300ms ease-in-out;
         background-color: hsl(240, 100%, 5%);
-        border-radius: 3%;
         align-items: center;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        padding-right: 3%;
-        
+        align-content: center;
+        text-align: center;
+        gap: 10;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+    #header.menuOpen {
+        display: flex;
+        position: relative;
+        width: 100%;
+       
+    }
+    #header.menuOpen #logo {
+        transition: 300ms ease-in-out;
+        filter: invert(1);
     }
     .principal {
         display: flex;
@@ -325,5 +355,5 @@ hr {
     .interesting {
         display: flex;
         flex-direction: column;
-    }
+    } 
 }
